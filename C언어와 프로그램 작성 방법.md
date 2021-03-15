@@ -32,11 +32,11 @@
 4. 프로그램 작성 방법 4단계
    (1/4)
    
-   ![image](https://user-images.githubusercontent.com/76800974/111095651-46cc4680-8581-11eb-8e75-b3ffb0043266.png)
+   ![image](https://user-images.githubusercontent.com/76800974/111096011-f6091d80-8581-11eb-8a67-7fa90a4290c1.png)
    
    (2/4)
    
-   ![image](https://user-images.githubusercontent.com/76800974/111095726-68c5c900-8581-11eb-984b-3e4babc5df77.png)
+   ![aaaa](https://user-images.githubusercontent.com/76800974/111096150-3ec0d680-8582-11eb-910b-c4dcf97d88d6.jpg)
 
    (3/4)
 
