@@ -19,3 +19,12 @@
    - 프로그램의 이식성을 높이기 위해…
 
    ![제목 없음](https://user-images.githubusercontent.com/76800974/111094870-85f99800-857f-11eb-8fe1-d8b4af81ffa5.jpg)
+3. 컴파일러란 무엇인가?!
+   - 인간이 만든 프로그램을 기계가 이해 하도록 기계어로 변환하는 변환기
+   - 통역관의 역할
+   
+   기계어란?
+   - 기계가 이해하는 2진 숫자(0과 1)로 작성된 언어
+   
+   ![image](https://user-images.githubusercontent.com/76800974/111095184-44b5b800-8580-11eb-9290-e7b858ecf094.png)
+   ![image](https://user-images.githubusercontent.com/76800974/111095193-467f7b80-8580-11eb-933d-edfee45e3227.png)
