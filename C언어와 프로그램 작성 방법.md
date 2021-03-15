@@ -30,6 +30,9 @@
    ![image](https://user-images.githubusercontent.com/76800974/111095193-467f7b80-8580-11eb-933d-edfee45e3227.png)
 
 4. 프로그램 작성 방법 4단계
+
+   ![image](https://user-images.githubusercontent.com/76800974/111096011-f6091d80-8581-11eb-8a67-7fa90a4290c1.png)
+   
    (1/4)
    
    ![image](https://user-images.githubusercontent.com/76800974/111096011-f6091d80-8581-11eb-8a67-7fa90a4290c1.png)
