@@ -28,3 +28,26 @@
    
    ![image](https://user-images.githubusercontent.com/76800974/111095184-44b5b800-8580-11eb-9290-e7b858ecf094.png)
    ![image](https://user-images.githubusercontent.com/76800974/111095193-467f7b80-8580-11eb-933d-edfee45e3227.png)
+
+4. 프로그램 작성 방법 4단계
+   (1/4)
+   
+   ![image](https://user-images.githubusercontent.com/76800974/111095651-46cc4680-8581-11eb-8e75-b3ffb0043266.png)
+   
+   (2/4)
+   
+   ![image](https://user-images.githubusercontent.com/76800974/111095726-68c5c900-8581-11eb-984b-3e4babc5df77.png)
+
+   (3/4)
+
+   ![image](https://user-images.githubusercontent.com/76800974/111095751-74b18b00-8581-11eb-8fe4-b0f22305082a.png)
+
+   (4/4)
+   
+   ![image](https://user-images.githubusercontent.com/76800974/111095773-82671080-8581-11eb-80c9-aa37ea0a1159.png)
+
+   프로그램 작성 4단계
+   
+   ![asdfsdaf](https://user-images.githubusercontent.com/76800974/111095906-c9ed9c80-8581-11eb-8821-8b9ad8462f89.jpg)
+
+   
