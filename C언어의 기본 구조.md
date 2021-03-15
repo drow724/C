@@ -24,7 +24,10 @@ C언어의 기본 구조 (2/3)
   - 헤더파일(Header File) : 확장자 .h를 가지는 파일
     - stdio   의미 :  Standard Input Output (표준 입력 출력)
     - stdio.h 의미 : 표준 입력 출력 함수들을 가지고 있는 헤더 파일
+  
+![image](https://user-images.githubusercontent.com/76800974/111098137-34084080-8586-11eb-8d28-a07b440b15a0.png)
 
+![image](https://user-images.githubusercontent.com/76800974/111098171-42565c80-8586-11eb-8d4e-9b62a0ba23c7.png)
 
 
 
