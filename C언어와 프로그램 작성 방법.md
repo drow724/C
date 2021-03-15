@@ -52,5 +52,6 @@
    프로그램 작성 4단계
    
    ![asdfsdaf](https://user-images.githubusercontent.com/76800974/111095906-c9ed9c80-8581-11eb-8821-8b9ad8462f89.jpg)
-
    
+   Step1 ~ Step4 까지의 작업을 도와주는 소프트웨어를 
+   ‘통합 개발 소프트웨어’라고 한다.
