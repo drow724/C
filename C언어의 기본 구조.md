@@ -29,5 +29,28 @@ C언어의 기본 구조 (2/3)
 
 ![image](https://user-images.githubusercontent.com/76800974/111098171-42565c80-8586-11eb-8d4e-9b62a0ba23c7.png)
 
+C언어의 기본 구조 (3/3)
 
+![image](https://user-images.githubusercontent.com/76800974/111098552-112a5c00-8587-11eb-838e-d3fdcb00eb1d.png)
 
+3. main() 함수
+  - main() 함수의 호출과 종료는 누가 결정 하는가? 
+    - 운영체제에 의해서 맨 처음 호출 되고 맨 나중에 종료 
+
+![image](https://user-images.githubusercontent.com/76800974/111098587-27d0b300-8587-11eb-96c3-ecbd57c35937.png)
+
+![image](https://user-images.githubusercontent.com/76800974/111098629-3f0fa080-8587-11eb-90b3-205abb5fff7b.png)
+
+![image](https://user-images.githubusercontent.com/76800974/111098642-46cf4500-8587-11eb-8afa-de435ec1d7ed.png)
+
+  - 표준 라이브러리 함수와 헤더파일은 프로그래밍을 편하게 한다.
+
+![image](https://user-images.githubusercontent.com/76800974/111098675-564e8e00-8587-11eb-95af-aa729c6787db.png)
+
+  - 세미콜론( ; ) 은 문장의 끝을 의미하는 마침표와 같은 존재이다.
+
+![image](https://user-images.githubusercontent.com/76800974/111098713-69615e00-8587-11eb-9001-6258738f25c6.png)
+
+  - return은 반환과 종료의 의미를 갖는다.
+
+![image](https://user-images.githubusercontent.com/76800974/111098740-767e4d00-8587-11eb-9b29-1cb5cd154e56.png)
