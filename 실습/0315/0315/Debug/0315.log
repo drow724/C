@@ -1,2 +1,4 @@
 ﻿  test001.c
+D:\자바 웹 개발자 양성과정\C\workExample\0315\0315\test001.c(8,12): warning C4129: 'w': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+D:\자바 웹 개발자 양성과정\C\workExample\0315\0315\test001.c(8,12): warning C4129: 'j': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
   0315.vcxproj -> D:\자바 웹 개발자 양성과정\C\workExample\0315\Debug\0315.exe
