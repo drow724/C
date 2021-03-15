@@ -53,4 +53,4 @@ C언어의 기본 구조 (3/3)
 
   - return은 반환과 종료의 의미를 갖는다.
 
-![image](https://user-images.githubusercontent.com/76800974/111098740-767e4d00-8587-11eb-9b29-1cb5cd154e56.png)
+![image](https://user-images.githubusercontent.com/76800974/111098859-b04f5380-8587-11eb-91cc-263ceabd6a61.png)
