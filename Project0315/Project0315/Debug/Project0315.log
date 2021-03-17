@@ -1,0 +1,5 @@
+﻿  test001.c
+E:\자바 웹개발자 양성 과정\C\workexam\Project0315\Project0315\test001.c(273,14): warning C4013: 'sum'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+E:\자바 웹개발자 양성 과정\C\workexam\Project0315\Project0315\test001.c(275,15): warning C4013: 'sub'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+E:\자바 웹개발자 양성 과정\C\workexam\Project0315\Project0315\test001.c(277,15): warning C4013: 'mul'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  Project0315.vcxproj -> E:\자바 웹개발자 양성 과정\C\workexam\Project0315\Debug\Project0315.exe
