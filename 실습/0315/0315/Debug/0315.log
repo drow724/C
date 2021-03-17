@@ -1,5 +1,0 @@
-﻿  test001.c
-D:\자바 웹 개발자 양성과정\C\workExample\0315\0315\test001.c(71,14): warning C4477: 'printf' : 서식 문자열 '%#X'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
-D:\자바 웹 개발자 양성과정\C\workExample\0315\0315\test001.c(76,14): warning C4477: 'printf' : 서식 문자열 '%#X'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
-D:\자바 웹 개발자 양성과정\C\workExample\0315\0315\test001.c(81,14): warning C4477: 'printf' : 서식 문자열 '%#X'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
-  0315.vcxproj -> D:\자바 웹 개발자 양성과정\C\workExample\0315\Debug\0315.exe
