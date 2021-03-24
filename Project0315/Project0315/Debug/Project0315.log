@@ -1,2 +1,3 @@
 ﻿  test001.c
-  Project0315.vcxproj -> E:\자바 웹개발자 양성 과정\c\workexam\Project0315\Debug\Project0315.exe
+E:\자바 웹개발자 양성 과정\C\workexam\Project0315\Project0315\test001.c(2034,9): warning C4101: 'input' :참조되지 않은 지역 변수입니다.
+  Project0315.vcxproj -> E:\자바 웹개발자 양성 과정\C\workexam\Project0315\Debug\Project0315.exe
