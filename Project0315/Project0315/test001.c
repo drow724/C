@@ -9,7 +9,7 @@ int main(void) {
 	printf("Hello 박성효 C world 4 \n");
 	printf("Hello abc C world 5 \n");
 	printf("c:\workexam\java \n");
-	return 0; 
+	return 0;
 }
 */
 
@@ -63,7 +63,7 @@ int main(void) {
 
 //  printf문 연습4
 /*
-#include<stdio.h>  
+#include<stdio.h>
 int main(void) {
 	int ch = 65;
 	printf("ch=%d , &ch=%#X  \n", ch, &ch);
@@ -80,7 +80,7 @@ int main(void) {
 	printf("ch=%d , ch=%#X , ch=%#o , ch=%c \n", ch, ch, ch, ch);
 	printf("ch=%d , ch=%#X , ch=%#o , ch=%c\n", 49, 49, 49, 49);
 	printf("-------------------- \n");
-	
+
 	return 0;
 }
 */
@@ -109,9 +109,9 @@ int main(void) {
 	int a = 6;
 	float b = 6.5;
 	printf("10진수 정수(6.5)=%%d : %d  \n", b);
-	
+
 	printf("10진수 실수(0.5)=%%f : %f  \n", b);
-	
+
 	printf("10진수 정수(6)=%%f : %f  \n", a);
 
 	return 0;
@@ -122,7 +122,7 @@ int main(void) {
 /*
 #include <stdio.h>
 int main(void){
-	int a = 10, b = 3;  
+	int a = 10, b = 3;
 	float c;
 	double d;
 //	c = (float)(a / b);
@@ -135,7 +135,7 @@ int main(void){
 	printf("(double)a / b= %f \n", (double)a / b);
 	printf("(double)a / b= %.10f \n", (double)a / b);
 	printf("(double)a / b= %.2f \n", (double)a / b);
-	
+
 
 	return 0;
 }
@@ -165,7 +165,7 @@ int main(void){
 	printf("%3d, %3d, %3d \n", 1, 20, 300);
 	printf("%3d, %3d, %3d \n", 100, 20, 3);
 	printf("%03d, %03d, %03d \n", 1, 20, 300);
-	
+
 	printf("%+3d, %+3d, %+3d \n", 1, 20, 300);
 	printf("%+3d, %+3d, %+3d \n", 1, 20, -300);
 	printf("%-3d, %-3d, %-3d \n", 1, 20, 300);
@@ -186,7 +186,7 @@ int main(void) {
 	int age=0;
 	char ch;
 
-	
+
 	printf("age를 입력하세요 : ");
 	scanf_s("\n%d", &age);
 	printf("age=%d \n", age);
@@ -228,13 +228,13 @@ int main(void){
  /*
 #include <stdio.h>
 #define  PI   3.14
-#define  NUM  3+4  // macro 로 동작 // call by name 
+#define  NUM  3+4  // macro 로 동작 // call by name
 #define  BUFFER_SIZE  200
 //  call by name(macro) , call by value, call by referance(address)
 int main(  ){
 	int a=3, b;
 	printf("&a=%d  \n", &a);
-//	b = a++ + a++ + a++ 의 결과는 a는 4 b는 9 인가요 ? 
+//	b = a++ + a++ + a++ 의 결과는 a는 4 b는 9 인가요 ?
 	b = a++ + ++a + ++a;
 	printf("a=%d  \n", a);
 	printf("b=%d  \n", b);
@@ -325,15 +325,15 @@ int main(void){
 	printf("숫자 j를 입력하세요: ");
 	scanf_s("%d", &j);
 	printf("i=%d , j=%d 입니다. \n", i, j);
-	k = max(i, j);  
+	k = max(i, j);
 	printf("%d와 %d 중 큰 수는 %d입니다. \n", i, j, k);
 	return 0;
 }
 int max(int a, int b){
-	if (a > b){ 
-		return a; 
+	if (a > b){
+		return a;
 	}
-	else { 
+	else {
 		return b;
 	}
 }
@@ -362,15 +362,15 @@ int main(void) {
 /*
 #include <stdio.h>
 void information(void);
-float input(void);                          
-void output(float x);                     
-float divide(float x, float y); 
+float input(void);
+void output(float x);
+float divide(float x, float y);
 
 int main(void){
 	float num1, num2, result;
 	information();
 	printf("첫 번째 실수 입력: ");
-	num1 = input();                         
+	num1 = input();
 //	output(num1);  //	printf("num1=%d\n", num1);
 	printf("두 번째 실수 입력: ");
 	num2 = input();
@@ -404,19 +404,19 @@ void output(float x) {
 // 9-5.c  // 지역변수
 /*
 #include <stdio.h>
-void func_A (void);		
+void func_A (void);
 int main(void){
 	int aaa = 10;
 		printf("main( ) 함수의 aaa 값 : %d\n", aaa );
-		func_A( );	
+		func_A( );
 		printf("main( ) 함수의 aaa 값 : %d\n", aaa);
 		return 0;
 }
 
-void func_A(void)					
+void func_A(void)
 {
-		int aaa=20;								
-		int bbb=30;							
+		int aaa=20;
+		int bbb=30;
 		printf("func_A( ) 함수의 aaa 값 : %d\n", aaa );
 		printf("func_A( ) 함수의 bbb 값 : %d\n", bbb );
 		return ;
@@ -427,8 +427,8 @@ void func_A(void)
 /*
 #include <stdio.h>
 int main(void){
-		int i=0;		
-		for(i=1; i<=10; i=i+1){   
+		int i=0;
+		for(i=1; i<=10; i=i+1){
 			printf("Hello C world %2d\n", i);
 		}
 		printf("----반복 종료----\n");
@@ -463,10 +463,10 @@ int main(void) {
 int main(void) {
 	int cnt, i=1, sum=0;
 	for (cnt = 1; cnt <= 10; cnt++) {
-		sum = sum + i; 
+		sum = sum + i;
 		printf("cnt=%d, i=%d, sum=%d\n", cnt, i, sum);
 		i = i + 1;  // i++;
-		
+
 	}
 	printf("----------반복문 종료-------------\n");
 	printf("cnt=%d, i=%d, sum=%d\n", cnt, i, sum);
@@ -482,7 +482,7 @@ int main(void) {
 int main(void) {
 	int cnt, i=0, sum=1;
 	for (cnt = 1; cnt <= 10; cnt++) {
-		i = i + 1;  
+		i = i + 1;
 		sum = sum + i;
 		printf("cnt=%d, i=%d, sum=%d\n", cnt, i, sum);
 	}
@@ -520,7 +520,7 @@ int main(void) {
 		i = i + 2;
 		sum = sum + i;
 		printf("cnt=%d, i=%d, sum=%d\n", cnt, i, sum);
-		
+
 	}
 	printf("----------반복문 종료-------------\n");
 	printf("cnt=%d, i=%d, sum=%d\n", cnt, i, sum);
@@ -578,7 +578,7 @@ int main(void) {
 		i = i + j;
 		sum = sum + i;
 		printf("cnt=%2d, j=%2d, i=%2d, sum=%4d\n", cnt, j, i, sum);
-		
+
 	}
 	printf("----------반복문 종료---------\n");
 	printf("cnt=%2d, j=%2d, i=%2d, sum=%4d\n", cnt, j, i, sum);
@@ -687,7 +687,7 @@ int main(void) {
 //10)Sum = 1!+ 2!+ 3!+ ... + NUM!  (10)항까지의 합
 //10)Sum = (1) + (1 * 2) + (1 * 2 * 3) + (1 * 2 * 3 * 4)... + (1 * 2 * 3 * 4*...*NUM)
 /*
-#include <stdio.h>   // 0!=1 ; 정의 
+#include <stdio.h>   // 0!=1 ; 정의
 int main() {
 	int cnt, i = 0, sum = 0, fact = 1;
 //	float sum=0, fact = 1;
@@ -725,8 +725,8 @@ int fact(int n) {
 		return n * fact(n-1);  // 5*fact(4)
 	}                               //     4*fact(3)
 }                                   //          3*fact(2)
-                                    //              2*fact(1)
-                                    //                   1
+									//              2*fact(1)
+									//                   1
 
 */
 
@@ -772,8 +772,8 @@ int fibo(int n) {   // fibo(5)=fibo(5-2) + fibo(5-1);
 	}                // fibo(4) = fibo(2) + fibo(3);
 	else {          // fibo(3) = fibo(1) + fibo(2);
 		return fibo(n-2) + fibo(n-1);
-	}                               
-}                                  
+	}
+}
 */
 
 // 3월 19일 금요일 반복문 제어문
@@ -783,7 +783,7 @@ int fibo(int n) {   // fibo(5)=fibo(5-2) + fibo(5-1);
 //             1  1  1
 /*
 #include <stdio.h>
-int main() { 
+int main() {
 	int cnt, i=1, sum=0;
 	for (cnt = 1; cnt <= 10; cnt++) {
 		sum = sum + i;
@@ -810,7 +810,7 @@ int main() {
 		i = i + 1;
 		sum = sum + i;
 		printf("cnt=%2d, i=%2d, sum=%4d\n", cnt, i, sum);
-		
+
 	}
 	printf("----------반복문 종료-------------\n");
 	printf("cnt=%2d, i=%2d, sum=%4d\n", cnt, i, sum);
@@ -821,7 +821,7 @@ int main() {
 	return 0;
 }
 */
-	
+
 // 반복문 for 를 while 변형 // cnt 선처리 후 증가
 /*
 #include <stdio.h>
@@ -855,7 +855,7 @@ int main() {
 		i = i + 1;
 		sum = sum + i;
 		printf("cnt=%2d, i=%2d, sum=%4d\n", cnt, i, sum);
-		
+
 	}
 	printf("----------반복문 종료-------------\n");
 	printf("cnt=%2d, i=%2d, sum=%4d\n", cnt, i, sum);
@@ -872,12 +872,12 @@ int main() {
 int main() {
 	int cnt, i=1, sum=0;
 	cnt = 0;
-	do{   
+	do{
 		cnt++;
 		sum = sum + i;
 		printf("cnt=%2d, i=%2d, sum=%4d\n", cnt, i, sum);
 		i = i + 1;
-		
+
 	} while (cnt < 10);   //  while(cnt (<= ) 9 ) {  //   while(cnt <= ( 9 ) ) {
 	printf("----------반복문 종료-------------\n");
 	printf("cnt=%2d, i=%2d, sum=%4d\n", cnt, i, sum);
@@ -911,7 +911,7 @@ int main() {
 //         j       10       9       8            1
 /*
 #include <stdio.h>
-#define NUM 10 
+#define NUM 10
 int main() {
 	int cnt, i=0, j= NUM+1, m, sum=0;
 	for (cnt = 1; cnt <= NUM; cnt++) {
@@ -1053,10 +1053,10 @@ int main() {
 			printf("%2d * %2d = %2d \n", i, j, k);
 		}
 		printf("-----%d단 종료---- \n", i);
-		
+
 	}
 	printf("---구구단 종료----- \n");
-	
+
 	return 0;
 }
 */
@@ -1155,7 +1155,7 @@ int main() {
 #include <stdio.h>
 #define NUM 10
 int main() {
-	// 부호 양수 음수라고 기재하신건 부호만 바뀌는 의미이고 
+	// 부호 양수 음수라고 기재하신건 부호만 바뀌는 의미이고
 	// 신호등은 값이 A B가 번갈아 가는 걸 의미하는 건가요!?  넵^^
 	// 13/2  6
 	int cnt, i=0,  sum=0, sw=0;  // sw 신호등
@@ -1200,9 +1200,9 @@ int fact(int n) {
 		return 1;
 	}
 	else {
-		return n * fact(n-1);  
-	}                             
-}                                 
+		return n * fact(n-1);
+	}
+}
 */
 // 구구단
 // 구구단-1  for 이용
@@ -1225,7 +1225,7 @@ int main() {
 			}
 			printf("-----%d단 종료---- \n", i);
 		}
-		
+
 	}
 	printf("---구구단 종료----- \n");
 	printf("%2d * %2d = %2d \n", i, j, k);
@@ -1244,8 +1244,8 @@ int main() {
 	int i, j, k;
 	int st=1, end=9, sw=1, temp;
 	for (i = 2; i <= 9; i++){
-		for (j = st; j != end+sw; j+=sw) { 
-				k = i * j;                     
+		for (j = st; j != end+sw; j+=sw) {
+				k = i * j;
 				printf("%2d * %2d = %2d \n", i, j, k);
 		}
 		printf("-----%d단 종료---- \n", i);
@@ -1262,22 +1262,22 @@ int main() {
 // for (j = st; j != end+sw; j+=sw) { 원리 소개
 /*
 	st=1, end=9, sw=1;
-       for (j = 1; j <= 9; j=j+1) {
-       for (j = 1; j < 9+1; j=j+1) {    
-       for (j = 1; j != 9+1; j=j+1) { 
-       for (j = st; j != end+sw; j+=sw) { 
+	   for (j = 1; j <= 9; j=j+1) {
+	   for (j = 1; j < 9+1; j=j+1) {
+	   for (j = 1; j != 9+1; j=j+1) {
+	   for (j = st; j != end+sw; j+=sw) {
 	temp = st;
 	st = end;
 	end = temp;
-  	sw=-sw;
-       for (j = 9; j >= 1; j=j-1) {
-       for (j = 9; j > 1-1; j=j-1) {   
-       for (j = 9; j != 1-1; j=j-1) {
-       for (j = end; j != st+sw; j+=sw) {
+	sw=-sw;
+	   for (j = 9; j >= 1; j=j-1) {
+	   for (j = 9; j > 1-1; j=j-1) {
+	   for (j = 9; j != 1-1; j=j-1) {
+	   for (j = end; j != st+sw; j+=sw) {
 
- 	j=j+sw
+	j=j+sw
 	j+=sw
-  	j++
+	j++
 	++j
 */
 
@@ -1315,7 +1315,7 @@ int main() {
 int main() {
 	int i, j, k;
 	for (i = 2; i <= 9; i++) {
-		for (j = 1; j <= 9; j++) 
+		for (j = 1; j <= 9; j++)
 		{
 			if (i % 2 == 0 ||  j%2==1 ) {
 				k = i * j;
@@ -1365,7 +1365,7 @@ int main() {
 		printf("년도 입력하세요. : _ 단 0: 종료_");
 		scanf_s("%d", &year);
 		if (year == 0) break;
-		
+
 		if ( ( year % 4 == 0 && year % 100 != 0 ) || year % 400 == 0 ) {
 			printf("%d년도는 윤년 : \n", year);
 		}
@@ -1383,7 +1383,7 @@ int main() {
 int main(void){
 	int num;
 	while (1) {
-	
+
 		printf("점수 입력 :  _단 9999_종료");
 		scanf_s("%d", &num);
 		if (num == 9999)break;
@@ -1407,7 +1407,7 @@ int main(void){
 		}
 	}
 	printf("수고^^\n");
-	
+
 	return 0;
 }
 */
@@ -1525,7 +1525,7 @@ int main(void) {
 //	student[1] = 80;
 //	student[2] = 70;
 //  int st[5] = { 0 };
-	
+
 //	for (cnt = 0; cnt < 5; cnt++) {
 //		st[cnt]=0;
 //	}
@@ -1554,7 +1554,7 @@ int main(void) {
 int main(void) {
 	int st[10] = { 0 };
 	int cnt, i;
-	
+
 	i = 7;
 	printf("i=%d, &i= %d \n",i, &i);
 	printf("i=%d, *&i= %d \n", i, *&i);
@@ -1624,7 +1624,7 @@ int main(void) {
 		printf("*(st+%d)= %4d \n", cnt, *(st + cnt));
 		printf("cnt=%d, &cnt= %4d \n", cnt, &cnt);
 	}
-	
+
 	return 0;
 }
 */
@@ -1633,7 +1633,7 @@ int main(void) {
 /*
 #include <stdio.h>
 #define NUM 5
-int main() { 
+int main() {
 	int i, j, rank;
 	int arr1[5] = { 50,40,70,30,60 };
 	printf("----기본 data  출력-------\n");
@@ -1736,7 +1736,7 @@ int main() {
 int main() {
 	int i, j, k;
 	int arr1[2][5] = { 50,40,70,30,60 };
-	
+
 	for (i = 0; i < 5; i++) {
 		arr1[1][i] = 1;
 	}
@@ -1779,7 +1779,7 @@ int main() {
 int main() {
 	int i, j, k, temp;
 	int arr1[5] = { 50,40,70,30,60 };
-	
+
 	printf("----기본 data  출력-------\n");
 	for (i = 0; i < 5; i++) {
 		printf("%3d ", arr1[i]);
@@ -1800,7 +1800,7 @@ int main() {
 		}
 		printf("\n");
 	}
-	
+
 	printf("----정렬 data  출력-------\n");
 	for (i = 0; i < 5; i++) {
 		printf("%3d ", arr1[i]);
@@ -1826,7 +1826,7 @@ int main() {
 	printf("\n");
 
 	for (i = 0; i < NUM-1; i++) {    // 선택 점수
-		lo = i;  
+		lo = i;
 		for (j = i+1; j < NUM; j++) {   // 비교 점수
 			if (arr1[lo] > arr1[j]) {
 				lo = j;
@@ -1835,7 +1835,7 @@ int main() {
 		temp = arr1[i];
 		arr1[i] = arr1[lo];
 		arr1[lo] = temp;
-		
+
 		printf("i=%2d : ", i );
 		for (k = 0; k < NUM; k++) {
 			printf("%3d ", arr1[k]);
@@ -2034,20 +2034,20 @@ int main() {
 	int i,  input;
 	int arr1[5] = { 0 };
 	int arr2[5] = { 0 };
-	
+
 	printf("----기본 data  입력-------\n");
 	for (i = 0; i < 5; i++) {
 		printf("%d번째 자료 입력 : ", i+1);
 		scanf_s("%d", &arr1[i]);
 	}
 	printf("\n");
-	
+
 	printf("----arr1[5] 출력-------\n");
 	for (i = 0; i < 5; i++) {
 		printf("%3d ",  arr1[i]);
 	}
 	printf("\n");
-	
+
 	for (i = 0; i < 5; i++) {
 		arr2[0+4-i]= arr1[i];
 	}
@@ -2056,7 +2056,7 @@ int main() {
 		printf("%3d ", arr2[i]);
 	}
 	printf("\n");
-	
+
 
 	return 0;
 }
@@ -2068,7 +2068,7 @@ int main() {
 int main() {
 	int i, j, k=0;
 	int arr1[5][5] = { 0 };
-	
+
 	for (i = 0; i < 5; i++) {
 		if (i % 2 == 0) {
 			for (j = 0; j < 5; j++) {
@@ -2112,7 +2112,7 @@ int main() {
 		교환;
 		sw = -sw;
 	}
-	
+
 	printf("---- arr1[5][5] 출력-------\n");
 	for (i = 0; i < 5; i++) {
 		for (j = 0; j < 5; j++) {
@@ -2180,7 +2180,7 @@ int main() {
 			printf("%3d ", arr1[i][j]);
 		}
 		printf("\n");
-		
+
 	}
 	return 0;
 }
@@ -2247,7 +2247,7 @@ int main() {
 	//		arr1[i][j] = k;
 			arr1[j][i] = k;
 		}
-		
+
 	}
 	printf("---- arr1[7][7] 출력-------\n");
 	for (i = 0; i < NUM; i++) {
@@ -2622,4 +2622,300 @@ int main() {
 	return 0;
 }
 */
+//로또
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(void) {
+	int num[6] = { 0 };
+	int lotto[6] = { 0 };
+	int i, j, cnt, w, k, temp;
+	int	b_count, bonus;
+	char ch;
+	srand((unsigned int)time(NULL)); //시간에 따라 seed 값 변경
+
+	while (1) {
+		for (i = 0; i < 6; i++) {
+			num[i] = 0;
+			lotto[i] = 0;
+		}
+		bonus = 0;
+		cnt = 0;
+		b_count = 0;
+		ch = 0;
+		printf("로또 시작 ? : Y(es), N(o) ");
+		scanf_s("\n%c", &ch);
+
+		if (ch == 'N' || ch == 'n')break;
+
+		// 사용자 입력 번호 저장
+		for (i = 0; i < 6; i++) {
+			printf("%d 번째 번호를 입력하세요.(_1~45_) : ", i + 1);
+			scanf_s("%d", &num[i]);
+			if (num[i] < 1 || num[i]>45) {
+				printf("번호는 1부터 45까지만 입력해야 합니다.\n");
+				i = i - 1;
+				continue;
+			}
+
+			if (i > 0) {
+				for (j = 0; j < i; j++) {
+					if (num[i] == num[j]) {
+						printf("번호는 중복 되어서는 안됩니다.\n");
+						i--;
+						break;
+					}
+				}
+			}
+
+		}
+
+		printf("\n");
+		printf("-------응모하신 번호--------\n");
+		for (i = 0; i < 6; i++) {
+			printf("%6d", num[i]);
+		}
+		printf("\n");
+
+		for (w = 0; w < 6 - 1; w++) {
+			int lo = w;
+			for (k = w + 1; k < 6; k++) {
+				if (num[lo] > num[k]) {
+					lo = k;
+				}
+			}
+			temp = num[w];
+			num[w] = num[lo];
+			num[lo] = temp;
+		}
+		printf("\n");
+		printf("-------응모하신 번호 정렬--------\n");
+		for (i = 0; i < 6; i++) {
+			printf("%6d", num[i]);
+		}
+		printf("\n");
+
+
+		//당첨 번호 저장
+		for (i = 0; i < 6; i++) {
+			lotto[i] = rand() % 45 + 1;
+			if (i > 0) {
+				for (j = 0; j < i; j++) {
+					if (lotto[i] == lotto[j]) {
+						printf("번호는 중복 되어서는 안됩니다.\n");
+						i--;
+						break;
+					}
+				}
+			}
+		}
+
+		printf("\n");
+		printf("-------당첨번호 번호--------\n");
+		for (i = 0; i < 6; i++) {
+			printf("%6d", lotto[i]);
+		}
+		printf("\n");
+
+		// 보너스 번호 만드는 문장
+		for (i = 0; i < 1; i++) {
+			bonus = rand() % 45 + 1; ;
+			for (j = 0; j < 6; j++) {
+				if (lotto[j] == bonus) {
+					printf("당첨번호는 중복 되어서는 안됩니다.\n");
+					i--;
+					break;
+				}
+			}
+		}
+		printf("\n-----------------------------\n");
+		printf("bonus =%6d  \n", bonus);
+		printf("\n-----------------------------\n");
+
+		// 맞춘 개수 검사
+		for (i = 0; i < 6; i++) {
+			for (j = 0; j < 6; j++) {
+				if (num[i] == lotto[j]) {
+					cnt = cnt + 1;
+				}
+			}
+		}
+		printf("cnt =%2d  \n", cnt);
+
+		// 보너스 번호 검사
+		for (i = 0; i < 6; i++) {
+			if (num[i] == bonus)
+				b_count = 1;
+		}
+
+		if (cnt == 6) {
+			printf("1등에 당첨되었습니다\n");
+		}
+		else  if (cnt == 5 && b_count == 1) {
+			printf("2등에 당첨되었습니다\n");
+		}
+		else if (cnt == 5) {
+			printf("3등에 당첨되었습니다\n");
+		}
+		else if (cnt == 4) {
+			printf("4등에 당첨되었습니다\n");
+		}
+		else if (cnt == 3) {
+			printf("5등에 당첨되었습니다\n");
+		}
+		else {
+			printf("꽝 다음 기회에^^\n");
+		}
+	}
+	printf("수고^^\n");
+
+	return 0;
+}
+*/
+
+// rand() 
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(void) {
+	srand((unsigned int)time(NULL));
+	//당첨 번호 저장
+	int i, lotto, lotto1;
+	for (i = 0; i < 6; i++) {
+		lotto = rand() % 6 + 1; // 1  ~ 45  // 99-20+1
+		printf("lotto=%6d \n", lotto);
+	}
+
+	for (i = 0; i < 6; i++) {
+		lotto1 = rand() % 45 + 1; // 1  ~ 45
+		printf("lotto1=%6d \n", lotto1);
+	}
+
+
+	return 0;
+
+}
+*/
+
+// 정렬
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(void) {
+	int num[20] = { 0 };
+	int i,  j;
+	int w=0, k=0, lo=0, temp;
+	srand((unsigned int)time(NULL)); //시간에 따라 seed 값 변경
+
+	for (i = 0; i < 20; i++) {
+		num[i] = rand() % 90 + 10;
+			if (i > 0) {
+				for (j = 0; j < i; j++) {
+					if (num[i] == num[j]) {
+						i--;
+						break;
+					}
+				}
+			}
+		}
+		printf("\n");
+		printf("w=%2d , lo=%2d  :  ", w, lo);
+		for (i = 0; i < 20; i++) {
+			printf("%3d", i);
+		}
+		printf("\n");
+		printf("----원본 자료----");
+		for (i = 0; i < 20; i++) {
+			printf("%3d", num[i]);
+		}
+		printf("\n");
+
+		int cnt = 0;
+		for (w = 0; w < 20-1; w++) {
+			int lo = w;
+			for (k = w + 1; k < 20; k++) {
+				if (num[lo] > num[k]) {
+					lo = k;
+				}
+			}
+			temp = num[w];
+			num[w] = num[lo];
+			num[lo] = temp;
+			cnt = cnt + 1;
+			printf("w=%2d , lo=%2d  :  ", w, lo );
+			for (i = 0; i < 20; i++) {
+				printf("%3d", num[i]);
+			}
+			printf("\n");
+		}
+		printf("cnt=%3d", cnt);
+
+	return 0;
+}
+*/
+
+
+// bubble sort 1 2 
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(void) {
+	int num[20] = { 0 };
+	int i, j;
+	int w = 0, k = 0, lo = 0, temp;
+	srand((unsigned int)time(NULL)); //시간에 따라 seed 값 변경
+
+	for (i = 0; i < 20; i++) {
+		num[i] = rand() % 90 + 10;
+		if (i > 0) {
+			for (j = 0; j < i; j++) {
+				if (num[i] == num[j]) {
+					i--;
+					break;
+				}
+			}
+		}
+	}
+	printf("\n");
+	//		printf("w=%2d , lo=%2d  :  ", w, lo);
+	printf("cnt = : ");
+	for (i = 0; i < 20; i++) {
+		printf("%3d", i);
+	}
+	printf("\n");
+	printf("-원본-: ");
+	for (i = 0; i < 20; i++) {
+		printf("%3d", num[i]);
+	}
+	printf("\n");
+	for (w = 0; w <= 18; w++) {
+		int sw = 0;
+		for (k = 0; k <= 18 - w; k++) {
+			if (num[k] > num[k + 1]) {
+				temp = num[k]; num[k] = num[k + 1];	num[k + 1] = temp;
+				sw = 1;
+			}
+		}
+		printf("w =%2d : ", w);
+		for (i = 0; i < 20; i++) {
+			printf("%3d", num[i]);
+		}
+		printf("  sw=%d:\n", sw);
+		if (sw == 0)break;
+	}
+
+
+	return 0;
+}
+
+
+
+//  bubble sort 3 *100
+
+// 진법변환
+
 
