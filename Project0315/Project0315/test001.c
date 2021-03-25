@@ -1,4 +1,4 @@
-﻿// 3월 15일
+// 3월 15일
 // printf문 연습
 /*
 #include<stdio.h>
@@ -1690,8 +1690,8 @@ int main() {
 }
 */
 
-// 고급 순위 석차
-
+// 고급 순위 석차_1차원 배열
+/*
 #include <stdio.h>
 #define NUM 5
 int main() {
@@ -1727,7 +1727,49 @@ int main() {
 
 	return 0;
 }
+*/
 
+// 고급 순위 석차 _2차원 배열
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i, j, k;
+	int arr1[2][5] = { 50,40,70,30,60 };
+	
+	for (i = 0; i < 5; i++) {
+		arr1[1][i] = 1;
+	}
+	printf("----기본 data  출력-------\n");
+	for (k = 0; k < 2; k++) {
+		for (i = 0; i < 5; i++) {
+			printf("%3d ", arr1[k][i]);
+		}
+		printf("\n");
+	}
+	for (i = 0; i < 4; i++) {    // 선택 점수
+		for (j = i+1; j < 5; j++) {   // 비교 점수
+			if (arr1[0][i] < arr1[0][j]) {
+				arr1[1][i] = arr1[1][i] + 1;
+			}else if (arr1[0][i] > arr1[0][j]) {
+				arr1[1][j] = arr1[1][j] + 1;
+			}
+			else {
+				continue;
+			}
+		}
+	}
+	printf("----완성 data  출력-------\n");
+	for (k = 0; k < 2; k++) {
+		for (i = 0; i < 5; i++) {
+			printf("%3d ", arr1[k][i]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
 
 // 고급 순위 석차의 원리 이용한 
 // 선택정렬
@@ -1810,3 +1852,774 @@ int main() {
 	return 0;
 }
 */
+
+//도형
+/*
+#include <stdio.h>
+int main() {
+	int i, j, k=0;
+	int arr1[5][5] = { 0 };
+	int arr2[5][5] = { 0 };
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			k = k + 1;
+	//		arr1[i][j] = k;
+			arr2[j][i] = k;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+	//		printf("%3d ", arr1[i][j]);
+			printf("%3d ", arr2[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
+
+//직각 삼각형 도형1
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i=0, j, k=0;
+	int row, col;
+	int arr1[NUM][NUM] = { 0 };
+// k 0  1  3  6  10  15  21;
+//	i   1  2  3  4   5
+	for (row = 0; row < NUM; row++) {
+		for (col = 0; col <= row; col++) {
+			i = i + 1;
+			k = k + i;
+			arr1[row][col] = k;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] == 0) {
+				printf("    ");
+			}
+			else {
+				printf("%3d ", arr1[i][j]);
+			}
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
+
+//직각 삼각형 도형2
+/*
+#include <stdio.h>
+#define NUM 7
+int main() {
+	int i=0, j, k=1;
+	int row, col;
+	int arr1[NUM][NUM] = { 0 };
+
+	for (row = 0; row < NUM; row++) {
+//		for (col = (0+4)-row; col <=4; col++) {
+		for (col = NUM-1-row; col < NUM; col++) {
+			arr1[row][col] = k;
+			k = k + 1;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
+
+//직각 삼각형 도형3 : 선택정렬 원리
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i=0, j, k=1;
+	int row, col;
+	int arr1[NUM][NUM] = { 0 };
+
+	for (row = 0; row < NUM; row++) {
+		for (col = row; col < NUM; col++) {
+			arr1[row][col] = k;
+			k = k + 1;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+}
+*/
+
+// 선택정렬
+//a[NUM] = {    };
+//   for (row = 0; row < NUM; row++) {   // 3 도형
+//   for (row = 0; row < NUM-1; row++) { //  선택
+//	   for (col = (row+1); col < NUM; col++) {  // 비교대상
+//	   for (col = (row );   col < NUM; col++) {  // 3 도형
+//			if (a[row] > a[col] {
+//				temp = a[row];
+//				a[row] = a[col];
+//				a[col] = temp;
+//			}
+//	}
+//}
+
+
+//직각 삼각형 도형4 : *버블 정렬 원리
+/*
+#include <stdio.h>
+#define NUM 7
+int main() {
+	int i=0, j, k=1;
+	int row, col;
+	int arr1[NUM][NUM] = { 0 };
+
+	for (row = 0; row < NUM; row++) {
+//		for (col = 0; col <= (0+4)-row; col++) {
+//		for (col = 0; col <= (NUM-1)-row; col++) {
+		for (col = 0; col < NUM-row; col++) {
+			arr1[row][col] = k;
+			k = k + 1;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+}
+*/
+
+// 
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i,  input;
+	int arr1[5] = { 0 };
+	int arr2[5] = { 0 };
+	
+	printf("----기본 data  입력-------\n");
+	for (i = 0; i < 5; i++) {
+		printf("%d번째 자료 입력 : ", i+1);
+		scanf_s("%d", &arr1[i]);
+	}
+	printf("\n");
+	
+	printf("----arr1[5] 출력-------\n");
+	for (i = 0; i < 5; i++) {
+		printf("%3d ",  arr1[i]);
+	}
+	printf("\n");
+	
+	for (i = 0; i < 5; i++) {
+		arr2[0+4-i]= arr1[i];
+	}
+	printf("----arr2[5] 출력-------\n");
+	for (i = 0; i < 5; i++) {
+		printf("%3d ", arr2[i]);
+	}
+	printf("\n");
+	
+
+	return 0;
+}
+*/
+
+//ㄹ 도형_기본
+/*
+#include <stdio.h>
+int main() {
+	int i, j, k=0;
+	int arr1[5][5] = { 0 };
+	
+	for (i = 0; i < 5; i++) {
+		if (i % 2 == 0) {
+			for (j = 0; j < 5; j++) {
+				k = k + 1;
+				arr1[i][j] = k;
+			}
+		}
+		else {
+			for (j = 4; j > -1; j--) {
+				k = k + 1;
+				arr1[i][j] = k;
+			}
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
+
+//
+//ㄹ 도형_*100 _report
+/*
+#include <stdio.h>
+int main() {
+	int i, j, k=0;
+	int st, end, sw;
+	int arr1[5][5] = { 0 };
+
+	for (i = 0; i < 5; i++) {
+		for (j = st; j <= end; j=j+sw) {
+				k = k + 1;
+				arr1[i][j] = k;
+		}
+		교환;
+		sw = -sw;
+	}
+	
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
+
+//ㄹ 도형_기본 2
+/*
+#include <stdio.h>
+int main() {
+	int i, j, k=0;
+	int arr1[5][5] = { 0 };
+
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			k = k + 1;
+			if (i % 2 == 0) {
+				arr1[i][j] = k;
+			}
+			else {
+				arr1[i][(0 + 4) - j] = k;
+			}
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
+
+//ㄹ 도형_기본 2-1
+/*
+#include <stdio.h>
+#define NUM 7
+int main() {
+	int i, j, k=0;
+	int arr1[NUM][NUM] = { 0 };
+
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			k = k + 1;
+			if (i % 2 == 0) {
+				arr1[i][j] = k;
+			}
+			else {
+				arr1[i][NUM-j-1] = k;
+			}
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+		
+	}
+	return 0;
+}
+*/
+
+//모래시계 도형_기본
+/*
+#include <stdio.h>
+#define NUM 7
+int main() {
+	int i, j, k=0;
+	int arr1[NUM][NUM] = { 0 };
+	int mid = NUM / 2;
+	int st=0, end=NUM-1;
+	for (i = 0; i < NUM; i++) {
+		for (j = st; j <= end; j++) {
+			k = k + 1;
+			arr1[i][j] = k;
+		}
+		if (i < mid) {
+			st = st + 1;
+			end = end - 1;
+		}
+		else {
+			st = st - 1;
+			end = end + 1;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+//모래시계 도형_시험용
+/*
+#include <stdio.h>
+#define NUM 7
+int main() {
+	int i, j, k=0;
+	int arr1[7][7] = { 0 };
+	int mid = 7 / 2;
+	int st=( -1 ), end= 7;
+	for (i = 0; i < 7; i++) {
+		if (i  <=  mid) {
+			st = st + 1;		end = end - 1;
+		}
+		else {
+			st = st - 1; 		end = end + 1;
+		}
+		for (j = st; j <= end; j++) {
+			k = k + 1;
+	//		arr1[i][j] = k;
+			arr1[j][i] = k;
+		}
+		
+	}
+	printf("---- arr1[7][7] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+//모래시계 도형_*100
+/*
+#include <stdio.h>
+#define NUM 9
+int main() {
+	int i, j, k=0;
+	int arr1[NUM][NUM] = { 0 };
+	int mid = NUM / 2;
+	int st, end;
+	for (i = 0; i < NUM; i++) {
+		if (i  <  mid) {
+			st = i;		end = NUM-1 - i;
+		}
+		else {
+			st = NUM-1- i; 	end = i;
+		}
+		for (j = st; j <= end; j++) {
+			k = k + 1;
+			arr1[i][j] = k;
+		}
+
+	}
+	printf("---- arr1[7][7] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+//마름모 도형_기본
+/*
+#include <stdio.h>
+#define NUM 7
+int main() {
+	int i, j, k=0;
+	int arr1[NUM][NUM] = { 0 };
+	int mid = NUM / 2;
+	int st= mid, end= mid;
+	for (i = 0; i < NUM; i++) {
+		for (j = st; j <= end; j++) {
+			k = k + 1;
+			arr1[i][j] = k;
+		}
+		if (i < mid) {
+			st = st - 1;
+			end = end + 1;
+		}
+		else {
+			st = st + 1;
+			end = end - 1;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+//마름모 도형_기본_시험
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i, j, k=0;
+	int arr1[NUM][NUM] = { 0 };
+	int mid = NUM / 2;
+	int st= mid+1, end= mid-1;
+	for (i = 0; i < NUM; i++) {
+		if (i <= mid) {
+			st = st - 1; 	end = end + 1;
+		}
+		else {
+			st = st + 1; 	end = end - 1;
+		}
+		for (j = st; j <= end; j++) {
+			k = k + 1;
+			arr1[i][j] = k;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+// 마방진 기본
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i, j, row, col, k=0;
+	int arr1[5][5] = { 0 };
+	int mid = 5 / 2;
+	row = 0;
+	col = mid;
+	for (k = 1; k <= 5*5; k++) {
+		arr1[row][col] = k;
+		if (k %5 == 0) {
+			row = row + 1;
+		}
+		else {
+			row = row - 1;
+			col = col + 1;
+			if (row < 0)row = 5 - 1;
+			if (col > 5 - 1)col = 0;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+
+// 마방진-2
+/*
+#include <stdio.h>
+#define NUM 7
+int main() {
+	int i, j, row, col, k=0;
+	int arr1[NUM][NUM] = { 0 };
+	int mid = NUM / 2;
+	row = 0;
+	col = mid;
+	for (k = 1; k <= NUM*NUM; k++) {
+		arr1[row][col] = k;
+		if (k % NUM == 0) {
+			row = row + 1;
+		}
+		else {
+			row = row - 1;
+			col = col + 1;
+			if (row < 0)row = NUM - 1;
+			if (col > NUM - 1)col = 0;
+		}
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			if (arr1[i][j] != 0) {
+				printf("%3d ", arr1[i][j]);
+			}
+			else {
+				printf("    ");
+			}
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+
+// 마방진-3
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i, j, row, col, k=0;
+	int arr1[NUM+1][NUM+1] = { 0 };
+	int mid = NUM / 2;
+	row = 0;
+	col = mid;
+	k = 1;
+	do {
+		arr1[row][col] = k;
+		arr1[row][NUM] = arr1[row][NUM]+ k;
+		arr1[NUM][col] = arr1[NUM][col]+k;
+		if (row == col) {
+			arr1[NUM][NUM] = arr1[NUM][NUM] + k;
+		}
+		if (k % NUM == 0) {
+			row = row + 1;
+		}
+		else {
+			row = row - 1;
+			col = col + 1;
+			if (row < 0)row = NUM - 1;
+			if (col > NUM - 1)col = 0;
+		}
+		k = k + 1;
+	} while (k <= NUM*NUM);
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i <= NUM; i++) {
+		for (j = 0; j <= NUM; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+
+	}
+
+
+	return 0;
+}
+*/
+
+
+// 달팽이 도형
+/*
+#include <stdio.h>
+#define NUM 5
+int main() {
+	int i, j, row=0, col=-1, k = 0, sw=1, m=5;
+	int arr1[5][5] = { 0 };
+	while (1) {
+		for (i = 0; i < m; i++) {
+			k = k + 1;
+			col = col + sw;
+			arr1[row][col] = k;
+		}
+		if (m < 1)break;
+		m = m - 1;
+		for (i = 0; i < m; i++) {
+			k = k + 1;
+			row = row + sw;
+			arr1[row][col] = k;
+		}
+		sw = -sw;
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+// 달팽이 도형
+/*
+#include <stdio.h>
+#define NUM 6
+int main() {
+	int i, j, row=0, col=-1, k = 0, sw=1, m= NUM;
+	int arr1[NUM][NUM] = { 0 };
+	while (1) {
+		for (i = 0; i < m; i++) {
+			k = k + 1;
+			col = col + sw;
+			arr1[row][col] = k;
+		}
+		if (m < 1)break;
+		m = m - 1;
+		for (i = 0; i < m; i++) {
+			k = k + 1;
+			row = row + sw;
+			arr1[row][col] = k;
+		}
+		sw = -sw;
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+*/
+
+// 달팽이 도형 90 회전
+/*
+#include <stdio.h>
+#define NUM 6
+int main() {
+	int i, j, row=0, col=-1, k = 0, sw=1, m= NUM;
+	int arr1[NUM][NUM] = { 0 };
+	int arr2[NUM][NUM] = { 0 };
+	while (1) {
+		for (i = 0; i < m; i++) {
+			k = k + 1;
+			col = col + sw;
+			arr1[row][col] = k;
+		}
+		if (m < 1)break;
+		m = m - 1;
+		for (i = 0; i < m; i++) {
+			k = k + 1;
+			row = row + sw;
+			arr1[row][col] = k;
+		}
+		sw = -sw;
+	}
+	printf("---- arr1[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			printf("%3d ", arr1[i][j]);
+		}
+		printf("\n");
+	}
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			arr2[j][NUM-1-i] =arr1[i][j];
+		}
+	}
+	printf("---- arr2[5][5] 출력-------\n");
+	for (i = 0; i < NUM; i++) {
+		for (j = 0; j < NUM; j++) {
+			printf("%3d ", arr2[i][j]);
+		}
+		printf("\n");
+	}
+
+
+
+	return 0;
+}
+*/
+
