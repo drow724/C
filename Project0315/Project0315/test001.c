@@ -2859,7 +2859,7 @@ int main(void) {
 
 
 // bubble sort 1 2 
-
+/*
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -2911,11 +2911,607 @@ int main(void) {
 
 	return 0;
 }
-
+*/
 
 
 //  bubble sort 3 *100
 
-// 진법변환
+// 10진수를 2진수로 진법변환-1_ 알고리즘
+//저장  : 오른쪽 -> 왼쪽
+//인쇄  : 왼쪽 -> 오른쪽
+/*
+#include<stdio.h>
+#define NUM 10
+int main(void) {
+	int arr1[10] = { 0 };
+	int dec, idec, i, mok, na, cnt=0;
+	while (1){
+		for (i = 0; i < 10; i++) {
+			arr1[i] = 0;
+		}
+	printf("dec 입력하시오 = _단 0: 종료");
+	scanf_s("%d", &dec);
+	if (dec == 0)break;
+	idec = dec;
+	for (i = 0; i < 10; i++) {
+		mok = dec / 2;
+		na = dec % 2;
+		arr1[(0 + 9) - i] = na;
+		if (mok ==0)break;
+		dec = mok;
+	}
+
+	printf("10진수 값= %4d :", idec);
+	for (i = 0; i <= 9; i++) {
+		printf("%2d", arr1[i]);
+	}
+
+		printf("\n");
+
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
 
 
+// 10진수를 2진수로 진법변환-2_ 알고리즘
+//저장  : 오른쪽 -> 왼쪽
+//인쇄  : 왼쪽 -> 오른쪽
+/*
+#include<stdio.h>
+#define NUM 10
+int main(void) {
+	int arr1[10] = { 0 };
+	int dec, idec, i, j, k, mok, na, cnt=0;
+	while (1){
+		for (i = 0; i < 10; i++) {
+			arr1[i] = 0;
+		}
+	printf("dec 입력하시오 = _단 0: 종료");
+	scanf_s("%d", &dec);
+	if (dec == 0)break;
+	idec = dec;
+	for (i = 0; i < 10; i++) {
+		mok = dec / 2;
+		na = dec % 2;
+		arr1[(0 + 9) - i] = na;
+		if (mok ==0)break;
+		dec = mok;
+	}
+
+	printf("10진수 값= %4d :", idec);
+	k = (0 + 9) - i;
+	for (j = k; j < 10; j++) {
+		printf("%2d", arr1[j]);
+	}
+
+		printf("\n");
+
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+// 10진수를 2진수로 진법변환-3_ 알고리즘
+//저장  : 왼쪽 -> 오른쪽
+//인쇄  : 오른쪽 -> 왼쪽
+/*
+#include<stdio.h>
+#define NUM 10
+int main(void) {
+	int arr1[10] = { 0 };
+	int dec, idec, i, mok, na, cnt=0;
+	while (1){
+		for (i = 0; i < 10; i++) {
+			arr1[i] = 0;
+		}
+	printf("dec 입력하시오 = _단 0: 종료");
+	scanf_s("%d", &dec);
+	if (dec == 0)break;
+	idec = dec;
+	for (i = 0; i < 10; i++) {
+		mok = dec / 2;
+		na = dec % 2;
+		arr1[i] = na;
+		if (mok ==0)break;
+		dec = mok;
+	}
+	printf("10진수 값= %4d :", idec);
+	for (i = 9; i <= 9; i++) {
+		printf("%2d", arr1[i]);
+	}
+
+	for (i = 9; i >= 0; i++) {
+		//	printf("%2d", arr1[9-i]);
+	//}
+	printf("\n");
+
+}
+	printf("^금요일^\n");
+	return 0;
+}
+
+*/
+
+// 10진수를 2진수로 진법변환-4_ 알고리즘
+//저장  : 왼쪽 -> 오른쪽
+//인쇄  : 오른쪽 -> 왼쪽
+/*
+#include<stdio.h>
+#define NUM 10
+int main() {
+	int arr1[10] = { 0 };
+	int dec, idec, i, j, mok, na, cnt=0;
+	while (1) {
+		for (i = 0; i < 10; i++) {
+			arr1[i] = 0;
+		}
+		printf("dec 입력하시오 = _단 0: 종료");
+		scanf_s("%d", &dec);
+		if (dec == 0)break;
+		idec = dec;
+		for (i = 0; i < 10; i++) {
+			mok = dec / 2;
+			na = dec % 2;
+			arr1[i] = na;
+			if (mok == 0)break;
+			dec = mok;
+		}
+		printf("10진수 값= %4d :", idec);
+		for (j = i; j >= 0; j--) {
+			printf("%2d", arr1[j]);
+		}
+		printf("\n");
+	}
+
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+// 10진수를 2진수로 진법변환-5_ 시험
+//저장  : 오른쪽 -> 왼쪽
+//인쇄  : 왼쪽 -> 오른쪽
+/*
+#include<stdio.h>
+#define NUM 10
+int main() {
+	int arr1[10] = { 0 };
+	int dec, idec, i, j, mok, na, cnt;
+	while (1) {
+		for (i = 0; i < 10; i++) {
+			arr1[i] = 0;
+		}
+		printf("dec 입력하시오 = _단 0: 종료");
+		scanf_s("%d", &dec);
+		if (dec == 0)break;
+		idec = dec;
+		for (cnt = 9; cnt >= 0; cnt--) {
+			if (dec == 0)break;
+			mok = dec / 2;
+			na = dec % 2;
+			arr1[cnt] = na;
+			dec = mok;
+		}
+		printf("10진수 값= %4d :", idec);
+
+		for (j = cnt; j < 10; j++) {
+			printf("%2d", arr1[j]);
+		}
+		printf("\n");
+	}
+
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+// 10진수를 2진수로 진법변환-6_시험
+//저장  : 오른쪽 -> 왼쪽
+//인쇄  : 왼쪽 -> 오른쪽
+/*
+#include<stdio.h>
+#define NUM 10
+int main(void) {
+	int arr1[10] = { 0 };
+	int dec, idec, i, j, k, mok, na;
+	while (1){
+		for (i = 0; i < 10; i++) {
+			arr1[i] = 0;
+		}
+	printf("dec 입력하시오 = _단 0: 종료");
+	scanf_s("%d", &dec);
+	if (dec == 0)break;
+	idec = dec;
+	i = -1;
+	while (i < 9) {
+		i++;
+		mok = dec / 2;
+		na = dec % 2;
+		arr1[(0 + 9) - i] = na;
+		if (mok ==0)break;
+		dec = mok;
+
+	}
+
+	printf("10진수 값= %4d :", idec);
+	k = 9-i;
+	for (j = k; j < 10; j++) {
+		printf("%2d", arr1[j]);
+	}
+
+		printf("\n");
+
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+// 10진수를 2진수로 진법변환-7_시험
+//저장  : 오른쪽 -> 왼쪽
+//인쇄  : 왼쪽 -> 오른쪽
+/*
+#include<stdio.h>
+#define NUM 10
+int main(void) {
+	int arr1[10] = { 0 };
+	int dec, idec, i, j, k, mok, na;
+	while (1){
+		for (i = 0; i < 10; i++) {
+			arr1[i] = 0;
+		}
+	printf("dec 입력하시오 = _단 0: 종료");
+	scanf_s("%d", &dec);
+	if (dec == 0)break;
+	idec = dec;
+	i = 0;
+	while (i < 10) {
+		mok = dec / 2;
+		na = dec % 2;
+		arr1[(0 + 9) - i] = na;
+		i++;
+		if (mok ==0)break;
+		dec = mok;
+
+	}
+
+	printf("10진수 값= %4d :", idec);
+	k = 10-i;
+	for (j = k; j < 10; j++) {
+		printf("%2d", arr1[j]);
+	}
+
+		printf("\n");
+
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+
+// 10진수를 2진수로 진법변환_ 알고리즘_최종
+//저장  : 오른쪽 -> 왼쪽
+//인쇄  : 왼쪽 -> 오른쪽
+/*
+#include<stdio.h>
+#define NUM 20
+int main(void) {
+	int arr1[10] = { 0 };
+	int dec, idec, i, j, mok, na;
+	while (1){
+		for (i = 0; i < NUM; i++) {
+			arr1[i] = 0;
+		}
+	printf("dec 입력하시오 = _단 0: 종료");
+	scanf_s("%d", &dec);
+	if (dec == 0)break;
+	idec = dec;
+	for (i = 0; i < NUM; i++) {
+		mok = dec / 2;
+		na = dec % 2;
+		arr1[NUM-1- i] = na;
+		if (mok ==0)break;
+		dec = mok;
+	}
+
+	printf("10진수 값= %4d :", idec);
+	for (j = NUM - 1 - i; j < NUM; j++) {
+		printf("%2d", arr1[j]);
+	}
+
+		printf("\n");
+
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+// 10진수를 n진수로 진법변환_ 알고리즘_최종
+//저장  : 오른쪽 -> 왼쪽
+//인쇄  : 왼쪽 -> 오른쪽
+/*
+#include<stdio.h>
+#define NUM 20
+int main(void) {
+	int arr1[NUM] = { 0 };
+	int dec, idec, i, j, mok, na, n;
+	while (1){
+		for (i = 0; i < NUM; i++) {
+			arr1[i] = 0;
+		}
+	printf("dec 입력하시오 = _단 0: 종료");
+	scanf_s("%d", &dec);
+	if (dec == 0)break;
+	printf("변환 진수를 입력하시오 = _단 2, 8,16 _ ");
+	scanf_s("%d", &n);
+	if (n != 2 && n != 8 && n != 16) {
+		printf("진수잘못 입력");
+		continue;
+
+	}
+
+	idec = dec;
+	for (i = 0; i < NUM; i++) {
+		mok = dec / n;
+		na = dec % n;
+		arr1[NUM-1- i] = na;
+		if (mok ==0)break;
+		dec = mok;
+	}
+
+	printf("10진수 값= %4d :", idec);
+	for (j = NUM - 1 - i; j < NUM; j++) {
+		if (arr1[j] >= 10) {
+			printf("%2c", arr1[j] + 55);
+
+		}
+		else {
+			printf("%2d", arr1[j]);
+		}
+	}
+
+		printf("\n");
+
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+// 10진수를 2진수로 진법변환-1_알고리즘 
+// 저장 : 오른쪽 -> 왼쪽
+// 인쇄 : 왼쪽 -> 오른쪽
+/*
+#include <stdio.h>
+#define NUM 10
+int main() {
+	int arr1[10] = { 0 };
+	int dec, idec, i, mok, na, cnt=0;
+
+	while (1) {
+		for (i = 0; i <10; i++) {
+			arr1[i] = 0;
+		}
+		printf("dec 입력하시오 = _단 1: 종료 ");
+		scanf_s("%d", &dec);
+		if (dec == 1)break;
+		idec = dec;
+		for (i = 0; i < 10; i++) {
+			mok = dec / 2;
+			na = dec % 2;
+			arr1[(0 + 9) - i] = na;
+			if (mok == 0)break;
+			dec = mok;
+		}
+		printf("10진수 값 =%4d : ", idec);
+		for (i = 0; i <= 9; i++) {
+			printf("%2d", arr1[i]);
+		}
+		printf("\n");
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+
+
+// 10진수를 N진수로 진법변환_알고리즘_최종 
+// 저장 : 오른쪽 -> 왼쪽
+// 인쇄 : 왼쪽 -> 오른쪽
+/*
+#include <stdio.h>
+#define NUM 20
+int main() {
+	char arr1[NUM];
+	char ch[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	int dec, idec, i, j, mok, na, n;
+
+	while (1) {
+		for (i = 0; i < NUM; i++) {
+			arr1[i] = 0;
+		}
+		printf("dec 입력하시오 = _단 0: 종료 ");
+		scanf_s("%d", &dec);
+		if (dec == 0)break;
+		printf("변환 진수를 입력하시오 = _단 2, 8, 16_ ");
+		scanf_s("%d", &n);
+
+//		if (n == 2 || n == 8 || n == 16) {
+//			goto AA;
+//		}
+//      else {
+//			printf("진수 잘못 입력");
+//			continue;
+//		}
+		if (n != 2 && n != 8 && n != 16) {
+			printf("진수 잘못 입력");
+			continue;
+		}
+
+AA:	idec = dec;
+		for (i = 0; i <NUM ; i++) {
+			mok = dec / n;
+			na = dec % n;
+//			printf("%c \n", ch[na]);
+			arr1[NUM-1-i] = ch[na];
+//			printf("%c ", arr1[i]);
+			if (mok == 0)break;
+			dec = mok;
+		}
+		printf("\n");
+		printf("10진수 값 =%4d , %d 진수 : ", idec, n);
+		for (j = NUM-1- i; j < NUM; j++) {
+			printf("%c ", arr1[j]);
+		}
+		printf("\n");
+	}
+	printf("^금요일^\n");
+	return 0;
+}
+*/
+// 2차원 배열 성적처리 종합 석차(기본, 고급) 정렬(선택, 버블(sw고급), 삽입) 이분검색 총정리
+
+#include<stdio.h>
+#define N 100
+int main(void) {
+	int i, j, k, temp, sw, flag, input;
+	int low, high, mid;
+	int a[5][7] = { 0 };
+	// 0열 번호, 1~3열 국어 영어 수학점수, 4열 총점, 5열 평균, 6열 석차
+	a[0][1] = 89, a[0][2] = 100, a[0][3] = 79;
+	a[1][1] = 46, a[1][2] = 78, a[1][3] = 98;
+	a[2][1] = 86, a[2][2] = 79, a[2][3] = 88;
+	a[3][1] = 67, a[3][2] = 77, a[3][3] = 88;
+	a[4][1] = 78, a[4][2] = 79, a[4][3] = 98;
+	for (i = 0; i < 5; i++) {
+		a[i][0] = N + i;
+		for (j = 1; j <= 3; j++) {
+			a[i][4] = a[i][4] + a[i][j];
+		}
+		//      a[i][4] = a[i][1] +a[i][2] + a[i][3];
+		a[i][5] = a[i][4] / 3;
+		a[i][6] = 1;
+	}
+
+	//  기본 석차 구하기
+	//	for (i = 0; i < 5; i++) {
+	//		for (j = 0; j < 5; j++) {
+	//			if (a[i][4] < a[j][4]) {
+	//				a[i][6] = a[i][6] + 1;
+	//			}
+	//		}
+	//	}
+	//  석차 구하기-2_선택정렬 원리 이용 고급석차
+	for (i = 0; i < 4; i++) {
+		for (j = i + 1; j < 5; j++) {
+			if (a[i][4] < a[j][4]) {
+				a[i][6] = a[i][6] + 1;
+			}
+			else if (a[i][4] > a[j][4]) {
+				a[j][6] = a[j][6] + 1;
+			}
+			else {
+				continue;
+			}
+		}
+	}
+
+	printf("---------------입력한 자료 출력---------------\n");
+	printf("   번호  국어  영어  수학  총점  평균  석차\n");
+	printf("----------------------------------------------\n");
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 7; j++) {
+			printf("%6d", a[i][j]);
+		}
+		printf("\n");
+	}
+	// 정렬 전 자료 검색 출력_선형검색
+	while (1) {
+		printf("검색석차 입력 : 단_0_종료 : ");
+		scanf_s("%d", &input);
+		if (input == 0)break;
+		flag = 0;
+		for (i = 0; i < 5; i++) {
+			if (a[i][6] == input) {
+				printf("---------------검색한 자료 출력---------------\n");
+				printf("   번호  국어  영어  수학  총점  평균  석차\n");
+				for (j = 0; j < 7; j++) {
+					printf("%6d", a[i][j]);
+				}
+				printf("\n");
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0) {
+			printf("해당 자료(석차)가 없습니다. \n");
+		}
+	}
+	// 석차기준 (선택)버블정렬
+	for (i = 0; i < 4; i++) {
+		sw = 0;
+		for (j = 0; j < 4 - i; j++) {
+			if (a[j][6] > a[j + 1][6]) {
+				for (k = 0; k < 7; k++) {
+					temp = a[j][k];
+					a[j][k] = a[j + 1][k];
+					a[j + 1][k] = temp;
+				}
+				sw = 1;
+			}
+		}
+		if (sw == 0)break;
+	}
+	// 석차기준 삽입정렬 공부
+
+	printf("---------------정렬후 자료 출력---------------\n");
+	printf("   번호  국어  영어  수학  총점  평균  석차\n");
+	printf("----------------------------------------------\n");
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 7; j++) {
+			printf("%6d", a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("----------------------------------------------\n");
+
+	// 이분 검색 공부*100
+	while (1) {
+		printf("검색석차 입력 : 단_0_입력:종료 : ");
+		scanf_s("%d", &input);
+		if (input == 0)break;
+		// 이분검색
+		low = 0, high = 4;
+		while (1) {
+			if (low > high) {
+				printf("해당 자료(석차)가 없습니다. \n");
+				break;
+			}
+			else {
+				mid = (low + high) / 2;
+				if (a[mid][6] == input) {
+					printf("---------------검색한 자료 출력---------------\n");
+					printf("   번호  국어  영어  수학  총점  평균  석차\n");
+					for (j = 0; j < 7; j++) {
+						printf("%6d", a[mid][j]);
+					}
+					printf("\n");
+					break;
+				}
+				else if (a[mid][6] > input) {
+					high = mid - 1;
+				}
+				else {
+					low = mid + 1;
+				}
+			}
+		}
+	}
+	printf("수고^^ \n");
+	return 0;
+}
